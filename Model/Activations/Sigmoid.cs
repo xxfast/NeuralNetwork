@@ -4,9 +4,9 @@ namespace xf
 {
     public class Sigmoid : Activation<float>
     {
-        public override float Activate(Neuron toActivate)
+        public override float Activate(float weightedSum, float bias)
         {
-            return 1 / (1 + (float)Math.Exp(-(toActivate.WeightedSum + toActivate.Bias)));
+            return 1 / (1 + (float)Math.Exp(-(weightedSum + bias)));
         }
     }
 }

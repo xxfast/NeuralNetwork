@@ -3,9 +3,9 @@ namespace xf
 {
     public class Linear : Activation<float>
     {
-        public override float Activate(Neuron toActivate)
+        public override float Activate(float weightedSum, float bias)
         {
-            return toActivate.WeightedSum;
+            return weightedSum + bias;
         }
     }
 }

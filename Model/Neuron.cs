@@ -21,9 +21,17 @@ namespace xf
 		}
 
         public void Feed(IEnumerable<Input> inputs){
-
-			foreach (Input i in inputs)
-				weights.Add(i, 0);
+            if(weights.Count <= 0){
+    			foreach (Input i in inputs)
+    				weights.Add(i, 0);
+            }else{
+				IEnumerator<Input> i = inputs.GetEnumerator();
+                i.MoveNext();
+                foreach(Input I in Weights.Keys){
+                    I.Value = i.Current.Value;
+                    i.MoveNext();
+                }
+            }       
 		}
 
 		public void Tune(IEnumerable<float> weights)
@@ -53,7 +61,7 @@ namespace xf
 
 
         public virtual float Activate(){
-            Value = Activation.Activate(this);
+            Value = Activation.Activate(WeightedSum, Bias);
             return Value;
         }
     }

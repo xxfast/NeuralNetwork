@@ -6,6 +6,6 @@ namespace xf
     {
 		private T treshhold;
 		public T Treshhold { get => treshhold; set => treshhold = value; }
-		public abstract T Activate(Neuron toActivate);
+		public abstract T Activate(T weightedSum, T bias);
     }
 }

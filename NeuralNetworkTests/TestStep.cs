@@ -8,20 +8,27 @@ namespace NeuralNetworkTests
     public class TestStep
     {
         private Step step;
-        private Neuron neuron;
 
         [SetUp()]
         public void init(){
             step = new Step();
-            neuron = new Neuron();
+            step.Treshhold = 0.5f;
         }
 
         [Test()]
         public void TestStepActive()
         {
             float expected = 1;
-            float actual = step.Activate(neuron);
+            float actual = step.Activate(1,0);
             Assert.AreEqual(expected,actual);
         }
+
+		[Test()]
+		public void TestStepInActive()
+		{
+			float expected = 0;
+			float actual = step.Activate(0,0);
+			Assert.AreEqual(expected, actual);
+		}
     }
 }

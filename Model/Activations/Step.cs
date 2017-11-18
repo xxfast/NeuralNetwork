@@ -3,9 +3,9 @@ namespace xf
 {
     public class Step : Activation<float>
     {
-        public override float Activate(Neuron toActivate)
+        public override float Activate(float weightedSum, float bias)
         {
-            return (toActivate.WeightedSum > Treshhold)? 1:0;
+            return (weightedSum > Treshhold)? 1:0;
         }
     }
 }
