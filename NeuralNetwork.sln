@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetwork", "NeuralNetwork.csproj", "{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworkTests", "NeuralNetworkTests\NeuralNetworkTests.csproj", "{034074EB-2C48-4EB2-A052-A5484CF3A685}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,16 +15,15 @@ Global
 		{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034074EB-2C48-4EB2-A052-A5484CF3A685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034074EB-2C48-4EB2-A052-A5484CF3A685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034074EB-2C48-4EB2-A052-A5484CF3A685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034074EB-2C48-4EB2-A052-A5484CF3A685}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
-		$1.DirectoryNamespaceAssociation = None
-		$1.ResourceNamePolicy = FileFormatDefault
 		$0.StandardHeader = $2
-		$2.Text = 
-		$2.IncludeInNewFiles = True
 		$0.VersionControlPolicy = $3
-		$3.inheritsSet = Mono
 	EndGlobalSection
 EndGlobal

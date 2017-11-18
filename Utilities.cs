@@ -22,5 +22,9 @@ namespace xann
 			}
 			return Matrix<float>.Build.Dense(to.RowCount, to.ColumnCount, outs);
 		}
+
+		public static Matrix<float> Differentiate(Matrix<float> to, float min, float max) {
+			return null;
+		}
 	}
 }

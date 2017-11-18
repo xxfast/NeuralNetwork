@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}</ProjectGuid>
+    <ProjectGuid>{034074EB-2C48-4EB2-A052-A5484CF3A685}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>xf</RootNamespace>
-    <AssemblyName>NeuralNetwork</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>NeuralNetworkTests</RootNamespace>
+    <AssemblyName>NeuralNetworkTests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -17,41 +17,31 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="MathNet.Numerics">
-      <HintPath>packages\MathNet.Numerics.3.19.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompressedNeuralNetwork.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities.cs" />
-    <Compile Include="Model\Neuron.cs" />
-    <Compile Include="Model\Activations\Activation.cs" />
-    <Compile Include="Model\Activations\Sigmoid.cs" />
-    <Compile Include="Model\Activations\Step.cs" />
-    <Compile Include="Model\Activations\Linear.cs" />
-    <Compile Include="Model\Perceptron.cs" />
-    <Compile Include="Model\Input.cs" />
-    <Compile Include="Model\Network.cs" />
-    <Compile Include="Model\NeuralNetwork.cs" />
+    <Compile Include="TestStep.cs" />
+    <Compile Include="TestInput.cs" />
+    <Compile Include="TestNetwork.cs" />
+    <Compile Include="TestPerceptron.cs" />
+    <Compile Include="TestNeuron.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="Model\Activations\" />
+    <ProjectReference Include="..\NeuralNetwork.csproj">
+      <Project>{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}</Project>
+      <Name>NeuralNetwork</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,7 +4,7 @@ using MathNet.Numerics.Distributions;
 
 namespace xann
 {
-	public class NeuralNetwork
+	public class CompressedNeuralNetwork
 	{
 		private int _nI; // number of inputs
 		private int _nH; // number of hidden 
@@ -19,14 +19,14 @@ namespace xann
 		private Matrix<float> _AH; // activation of hidden 
 		private Matrix<float> _AO; // activation of hidden 
 
-		public NeuralNetwork(int inputs, int hidden, int outputs)
+		public CompressedNeuralNetwork(int inputs, int hidden, int outputs)
 		{
 			_nI = inputs;
 			_nH = hidden;
 			_nO = outputs;
 		}
 
-		public NeuralNetwork() : this(2, 3, 1) 
+		public CompressedNeuralNetwork() : this(2, 3, 1) 
 		{
 			_iW = Matrix<float>.Build.Random(_nI, _nH);
 			_oW = Matrix<float>.Build.Random(_nH, _nO);
