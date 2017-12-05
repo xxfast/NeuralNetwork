@@ -20,7 +20,7 @@ namespace NeuralNetworkTests
 		public void TestInitialise()
 		{
 			int expect = 0;
-			int actual = neuron.Weights.Count;
+			int actual = neuron.Map.Count;
 			Assert.AreEqual(expect, actual);
 		}
 
@@ -29,7 +29,7 @@ namespace NeuralNetworkTests
         {
 			neuron = new Neuron(Input.FromArray(new float[] { 0, 0, 0, 0 }));
             int expect = 4;
-            int actual = neuron.Weights.Count;
+            int actual = neuron.Map.Count;
             Assert.AreEqual(expect,actual);
         }
 
@@ -40,7 +40,7 @@ namespace NeuralNetworkTests
             neuron.Feed(values);
 
 			int i = 0;
-            foreach (Input actual in neuron.Weights.Keys)
+            foreach (Input actual in neuron.Map.Keys)
 			{
                 Input expect = values[i++];
                 Assert.AreEqual(expect.Value, actual.Value);
@@ -56,7 +56,7 @@ namespace NeuralNetworkTests
             neuron.Tune(values);
 
             int i = 0;
-            foreach(float actual in neuron.Weights.Values){
+            foreach(float actual in neuron.Map.Values){
 				float expect = values[i++];
 				Assert.AreEqual(expect, actual);
             }

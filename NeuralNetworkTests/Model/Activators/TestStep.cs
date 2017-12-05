@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using xf;
 using System;
+using xf;
 
 namespace NeuralNetworkTests
 {
@@ -8,6 +8,7 @@ namespace NeuralNetworkTests
     public class TestStep
     {
         private Step step;
+        private float bias = 0;
 
         [SetUp()]
         public void init(){
@@ -19,7 +20,7 @@ namespace NeuralNetworkTests
         public void TestStepActive()
         {
             float expected = 1;
-            float actual = step.Activate(1,0);
+            float actual = step.Activate(1,bias);
             Assert.AreEqual(expected,actual);
         }
 
@@ -27,7 +28,7 @@ namespace NeuralNetworkTests
 		public void TestStepInActive()
 		{
 			float expected = 0;
-			float actual = step.Activate(0,0);
+			float actual = step.Activate(0,bias);
 			Assert.AreEqual(expected, actual);
 		}
     }

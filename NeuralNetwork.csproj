@@ -36,16 +36,19 @@
     <Compile Include="CompressedNeuralNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
-    <Compile Include="Model\Neuron.cs" />
     <Compile Include="Model\Activations\Activation.cs" />
     <Compile Include="Model\Activations\Sigmoid.cs" />
     <Compile Include="Model\Activations\Step.cs" />
     <Compile Include="Model\Activations\Linear.cs" />
-    <Compile Include="Model\Perceptron.cs" />
-    <Compile Include="Model\Input.cs" />
-    <Compile Include="Model\Network.cs" />
-    <Compile Include="Model\NeuralNetwork.cs" />
     <Compile Include="MainProgram.cs" />
+    <Compile Include="Model\Activations\IHaveTreshhold.cs" />
+    <Compile Include="Model\Networks\Network.cs" />
+    <Compile Include="Model\Networks\NeuralNetwork.cs" />
+    <Compile Include="Model\Inputs\Input.cs" />
+    <Compile Include="Model\Inputs\Neuron.cs" />
+    <Compile Include="Model\Trainers\Trainer.cs" />
+    <Compile Include="Model\Trainers\PerceptronTrainer.cs" />
+    <Compile Include="Model\Inputs\Perceptron.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -53,6 +56,9 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Model\Activations\" />
+    <Folder Include="Model\Networks\" />
+    <Folder Include="Model\Inputs\" />
+    <Folder Include="Model\Trainers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
