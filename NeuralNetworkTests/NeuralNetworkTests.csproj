@@ -31,17 +31,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestStep.cs" />
-    <Compile Include="TestInput.cs" />
-    <Compile Include="TestNetwork.cs" />
-    <Compile Include="TestPerceptron.cs" />
-    <Compile Include="TestNeuron.cs" />
+    <Compile Include="Model\Activators\TestLinear.cs" />
+    <Compile Include="Model\Activators\TestStep.cs" />
+    <Compile Include="Model\Inputs\TestInput.cs" />
+    <Compile Include="Model\Inputs\TestNeuron.cs" />
+    <Compile Include="Model\Networks\TestNetwork.cs" />
+    <Compile Include="Model\Activators\TestSigmoid.cs" />
+    <Compile Include="Model\Trainers\TestPerceptronTrainer.cs" />
+    <Compile Include="Model\Inputs\TestPerceptron.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeuralNetwork.csproj">
       <Project>{4FFDA609-C65C-4986-BBA5-35C74F38CF1D}</Project>
       <Name>NeuralNetwork</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="Model\Activators\" />
+    <Folder Include="Model\Inputs\" />
+    <Folder Include="Model\Networks\" />
+    <Folder Include="Model\Trainers\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
